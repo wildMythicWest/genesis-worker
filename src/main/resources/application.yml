@@ -1,0 +1,11 @@
+server:
+  port: 8084
+spring:
+  cloud:
+    stream:
+      bindings:
+        process-in-0:
+          destination: processing-queue
+          group: worker
+        process-out-0:
+          destination: results-queue
